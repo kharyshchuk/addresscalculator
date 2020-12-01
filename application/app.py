@@ -1,17 +1,15 @@
+import asyncio
 import json
-import os
+from functools import wraps
 from http.client import BAD_REQUEST
 
 import pandas as pd
 from flask import Flask, request, Response, abort
-from flask_pymongo import PyMongo
 
 from constants import ALLOWED_EXTENSIONS, CLIENT_TYPE, INCORRECT_FILE_PARAMETER, FILE, INCORRECT_RESULT_ID_PARAMETER
 from db_layers.mongo_db import db_mongo
 from db_layers.result_repository import RESULT_ID
 from helpers.helper import get_addresses_info
-from functools import wraps
-import asyncio
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024

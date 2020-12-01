@@ -69,4 +69,3 @@ class BaseRepository:
 
     async def delete_many(self, data):
         return await self.collection.delete_many(data)
-
