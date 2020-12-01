@@ -1,0 +1,6 @@
+flask
+flask-restful
+arcgis
+pandas
+Flask-PyMongo
+Flask-aiohttp
