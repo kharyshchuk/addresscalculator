@@ -32,3 +32,5 @@ Dependencies
 *   arcgis
 *   pandas
 *   Flask-PyMongo
+
+Python 3.8
